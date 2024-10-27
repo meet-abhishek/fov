@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOV Calculator</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h3 class="text-center mb-4">Field of View (FOV) Calculator</h3>
+        <form id="fovform">
+            <fieldset>
+                <legend class="text-light">Parameters</legend>
+
+                <div class="form-group">
+                    <label for="focalLength">Focal Length (mm):</label>
+                    <input type="text" id="focalLength" name="focalLength" class="form-control" placeholder="defaults to 50 mm">
+                </div>
+
+                <div class="form-group">
+                    <label for="distance">Distance (m):</label>
+                    <input type="number" id="distance" name="distance" class="form-control" placeholder="defaults to 3 meter">
+                </div>
+
+                <div class="form-group">
+                    <label for="sensorWidth">Sensor Width (mm):</label>
+                    <input type="number" id="sensorWidth" name="sensorWidth" class="form-control" placeholder="defaults to 35.9 mm">
+                </div>
+
+                <div class="form-group">
+                    <label for="sensorHeight">Sensor Height (mm):</label>
+                    <input type="number" id="sensorHeight" name="sensorHeight" class="form-control" placeholder="defaults to 24.0 mm">
+                </div>
+            </fieldset>
+            <button type="submit" class="btn btn-primary btn-block">Calculate FOV</button>
+        </form>
+
+        <div id="result" class="container mt-4 mb-4 d-flex justify-content-center">
+            <div class="text-center bg-dark p-4 rounded">
+                <h4 class="text-light mb-3">Calculation Results:</h4>
+                <p id="resultContent" class="text-warning mb-0"></p>
+                <!-- Result will be inserted here dynamically -->
+            </div>
+        </div>
+        
+        
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
