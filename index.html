@@ -14,7 +14,7 @@
         <h3 class="text-center mb-4">Field of View (FOV) Calculator</h3>
         <form id="fovform">
             <fieldset>
-                <legend class="text-light">Parameters</legend>
+                <legend class="text-light">Enter Parameters</legend>
 
                 <div class="form-group">
                     <label for="focalLength">Focal Length (mm):</label>
@@ -38,17 +38,17 @@
             </fieldset>
             <button type="submit" class="btn btn-primary btn-block">Calculate FOV</button>
         </form>
-
-        <div id="result" class="container mt-4 mb-4 d-flex justify-content-center">
-            <div class="text-center bg-dark p-4 rounded">
-                <h4 class="text-light mb-3">Calculation Results:</h4>
-                <p id="resultContent" class="text-warning mb-0"></p>
-                <!-- Result will be inserted here dynamically -->
-            </div>
-        </div>
-        
-        
     </div>
+    
+    <br>
+
+    <div class="container d-flex flex-column justify-content-center align-items-center" >
+        <h4>FOV Results</h4>
+        <div class="d-flex flex-column justify-content-center align-items-center bg-dark border rounded" style="height: 20rem; width: 100%;">
+            <div id="result" ></div>
+        </div>
+                                                
+    </div>        
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
