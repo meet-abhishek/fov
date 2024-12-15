@@ -14,6 +14,12 @@
         <div class="container mt-5">
             <h4 class="text-center">Field of View (FOV) Calculator</h4>
             <form id="fovform">
+                    <label for="sensorSelect">Choose Camera Sensor:</label>
+                    <select id="sensorSelect">
+                    <option value="">Select a Sensor</option>
+                    <!-- The options will be added dynamically here -->
+                    </select>
+
                     <div class="form-group">
                         <label for="focalLength">Focal Length (mm):</label>
                         <input type="number" id="focalLength" name="focalLength" class="form-control" step="any" placeholder="defaults to 50 mm">
