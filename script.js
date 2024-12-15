@@ -1,5 +1,3 @@
-
-
 const calculateFov = (event) => {
     event.preventDefault();
 
@@ -15,21 +13,20 @@ const calculateFov = (event) => {
     }
 
     const sensorDiagonal = Math.sqrt(sensorWidth ** 2 + sensorHeight ** 2);
-    const horizontalFOV = 2 * distance * Math.tan(Math.atan(sensorWidth / (2 * focalLength)) / 2);
-    const verticalFOV = 2 * distance * Math.tan(Math.atan(sensorHeight / (2 * focalLength)) / 2);
-    const diagonalFOV = 2 * distance * Math.tan(Math.atan(sensorDiagonal / (2 * focalLength)) / 2);
+
+    // Correct FOV calculation (without dividing angle by 2)
+    const horizontalFOV = (2 * distance * Math.tan(Math.atan(sensorWidth / (2 * focalLength))));
+    const verticalFOV = (2 * distance * Math.tan(Math.atan(sensorHeight / (2 * focalLength))));
+    const diagonalFOV = (2 * distance * Math.tan(Math.atan(sensorDiagonal / (2 * focalLength))));
 
     document.getElementById('result').innerHTML = `
-
-        
-        <div >
+        <div>
             <div class="card-body text-white">
                 <h5 class="card-text"><strong>Horizontal FOV: ${horizontalFOV.toFixed(2)} m</strong></h5>
                 <h5 class="card-text"><strong>Vertical FOV: ${verticalFOV.toFixed(2)} m</strong></h5>
                 <h5 class="card-text"><strong>Diagonal FOV: ${diagonalFOV.toFixed(2)} m</strong></h5>
             </div>
         </div>
-       
     `;
 }
 
